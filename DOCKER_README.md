@@ -1,4 +1,4 @@
-# FinanceHub SaaS - Guia de Deploy com Docker
+# Rendalyze SaaS - Guia de Deploy com Docker
 
 ## 🚀 Deploy Options
 
@@ -35,7 +35,7 @@ PORT=5000
 ### 2. Build Local
 ```bash
 # Build da imagem
-docker build -t financehub:latest .
+docker build -t rendalyze:latest .
 
 # Executar com PostgreSQL
 docker-compose up -d
@@ -44,7 +44,7 @@ docker-compose up -d
 ### 3. Deploy Heroku
 ```bash
 chmod +x deploy-heroku.sh
-./deploy-heroku.sh meu-financehub-app
+./deploy-heroku.sh meu-rendalyze-app
 ```
 
 ### 4. Deploy Railway
@@ -91,7 +91,7 @@ chmod +x deploy-railway.sh
 ## 🔒 Segurança
 
 ### Implementações
-- Usuário não-root (financehub:1001)
+- Usuário não-root (rendalyze:1001)
 - Dependências Alpine atualizadas
 - Health check para disponibilidade
 - Variáveis de ambiente seguras
@@ -116,7 +116,7 @@ Se você receber erro "Cannot find package 'vite'":
 
 2. **Testar build local**
    ```bash
-   docker build --no-cache -t financehub-test .
+   docker build --no-cache -t rendalyze-test .
    ```
 
 3. **Verificar estrutura**
@@ -131,7 +131,7 @@ Se você receber erro "Cannot find package 'vite'":
 docker system prune -a
 
 # Build com logs verbose
-docker build --no-cache --progress=plain -t financehub .
+docker build --no-cache --progress=plain -t rendalyze .
 ```
 
 ### Erro de Dependências
@@ -150,7 +150,7 @@ docker run --rm postgres:16-alpine pg_isready -h host -p 5432 -U user
 ### Canvas/PDF não Funciona
 ```bash
 # Verificar dependências Alpine
-docker run --rm -it financehub:latest sh
+docker run --rm -it rendalyze:latest sh
 apk list | grep cairo
 ```
 

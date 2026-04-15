@@ -33,7 +33,7 @@ async function migrateWahaConfig() {
         enabled
       ) VALUES (
         'https://whatsapp-waha-whatsapp.ie5w7f.easypanel.host',
-        'pulsofinanceiro',
+        'rendalyze',
         'numero-principal',
         false
       ) ON CONFLICT DO NOTHING

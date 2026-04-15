@@ -135,7 +135,7 @@ export default function ExternalCheckout() {
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div>
               <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#FF64B3] to-[#00FFAA] bg-clip-text text-transparent">
-                FinanceHub
+                Rendalyze
               </h1>
               <p className="text-muted-foreground mt-1">
                 Gestão financeira inteligente e moderna
@@ -167,7 +167,7 @@ export default function ExternalCheckout() {
                     Olá, <span className="bg-gradient-to-r from-[#FF64B3] to-[#00FFAA] bg-clip-text text-transparent">{data.user?.nome}</span>!
                   </h2>
                   <p className="text-muted-foreground">
-                    Você está a um passo de desbloquear todos os recursos do FinanceHub.
+                    Você está a um passo de desbloquear todos os recursos do Rendalyze.
                     Complete o pagamento abaixo para ativar sua conta e começar sua jornada financeira.
                   </p>
                 </div>
@@ -250,7 +250,7 @@ export default function ExternalCheckout() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
             <div>
               <h4 className="font-semibold mb-3 bg-gradient-to-r from-[#FF64B3] to-[#00FFAA] bg-clip-text text-transparent">
-                FinanceHub
+                Rendalyze
               </h4>
               <p className="text-sm text-muted-foreground">
                 Sua plataforma completa para gestão financeira inteligente e moderna.
@@ -286,7 +286,7 @@ export default function ExternalCheckout() {
           </div>
 
           <div className="text-center text-sm text-muted-foreground pt-6 border-t">
-            © {new Date().getFullYear()} FinanceHub. Todos os direitos reservados.
+            © {new Date().getFullYear()} Rendalyze. Todos os direitos reservados.
           </div>
         </motion.footer>
       </div>

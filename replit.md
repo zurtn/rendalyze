@@ -1,8 +1,8 @@
-# FinanceHub SaaS - Replit Development Guide
+# Rendalyze SaaS - Replit Development Guide
 
 ## Overview
 
-FinanceHub is a comprehensive SaaS financial management platform built with React, Node.js, Express, and PostgreSQL. The system provides personal finance tracking with administrative capabilities, multi-tenancy support, and API access for external integrations.
+Rendalyze is a comprehensive SaaS financial management platform built with React, Node.js, Express, and PostgreSQL. The system provides personal finance tracking with administrative capabilities, multi-tenancy support, and API access for external integrations.
 
 ## System Architecture
 

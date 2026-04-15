@@ -128,7 +128,7 @@ export class SubscriptionService {
         cycle: 'MONTHLY',
         value: parseFloat(plan.priceMonthly.toString()),
         nextDueDate: nextDueDate,
-        description: `Assinatura ${plan.name} - FinanceHub`,
+        description: `Assinatura ${plan.name} - Rendalyze`,
         creditCard: data.creditCard,
         creditCardHolderInfo: data.creditCardHolderInfo,
         remoteIp: data.remoteIp
@@ -276,7 +276,7 @@ export class SubscriptionService {
       const webhookData = {
         evento: "usuario_ativado",
         timestamp: new Date().toISOString(),
-        dominio: process.env.BASE_URL || 'https://financehub.xpiria.com.br',
+        dominio: process.env.BASE_URL || 'https://rendalyze.rendalyze.com.br',
         id: user.id,
         nome: user.nome,
         email: user.email,
@@ -299,7 +299,7 @@ export class SubscriptionService {
       console.log('[SubscriptionService] Webhook payload:', JSON.stringify(webhookData, null, 2));
 
       const webhookResponse = await fetch(
-        process.env.WEBHOOK_ATIVACAO_URL || 'https://prod-wf.pulsofinanceiro.net.br/webhook/ativacao',
+        process.env.WEBHOOK_ATIVACAO_URL || 'https://prod-wf.rendalyze.com.br/webhook/ativacao',
         {
           method: 'POST',
           headers: {

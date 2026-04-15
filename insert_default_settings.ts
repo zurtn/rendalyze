@@ -11,12 +11,12 @@ async function insertDefaultSettings() {
 
     await sql`
       INSERT INTO system_settings (setting_key, setting_value, setting_metadata) VALUES
-        ('system_name', 'FinanceHub', '{"type": "text", "label": "Nome do Sistema", "description": "Nome exibido em todo o sistema"}'),
-        ('system_name_short', 'financehub', '{"type": "text", "label": "Nome Curto", "description": "Versão curta usada em emails e URLs (lowercase)"}'),
+        ('system_name', 'Rendalyze', '{"type": "text", "label": "Nome do Sistema", "description": "Nome exibido em todo o sistema"}'),
+        ('system_name_short', 'rendalyze', '{"type": "text", "label": "Nome Curto", "description": "Versão curta usada em emails e URLs (lowercase)"}'),
         ('system_tagline', 'Gestão financeira inteligente e moderna', '{"type": "text", "label": "Slogan/Tagline", "description": "Frase descritiva do sistema"}'),
-        ('support_email', 'suporte@financehub.com', '{"type": "email", "label": "Email de Suporte", "description": "Email de contato do suporte"}'),
-        ('system_url', 'https://financehub.com', '{"type": "url", "label": "URL do Sistema", "description": "URL principal do sistema"}'),
-        ('system_description', 'FinanceHub - Gerencie suas finanças pessoais com uma interface moderna e futurista. Acompanhe receitas, despesas e tenha controle total do seu dinheiro.', '{"type": "textarea", "label": "Descrição do Sistema", "description": "Descrição para SEO e meta tags"}')
+        ('support_email', 'suporte@rendalyze.com', '{"type": "email", "label": "Email de Suporte", "description": "Email de contato do suporte"}'),
+        ('system_url', 'https://rendalyze.com', '{"type": "url", "label": "URL do Sistema", "description": "URL principal do sistema"}'),
+        ('system_description', 'Rendalyze - Gerencie suas finanças pessoais com uma interface moderna e futurista. Acompanhe receitas, despesas e tenha controle total do seu dinheiro.', '{"type": "textarea", "label": "Descrição do Sistema", "description": "Descrição para SEO e meta tags"}')
       ON CONFLICT (setting_key) DO NOTHING
     `;
 

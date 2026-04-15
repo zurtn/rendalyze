@@ -79,7 +79,7 @@ export default function Register() {
     email: z.string().email(t('validation.email_invalid', 'Email inválido')),
     senha: z.string().min(6, t('validation.password_min_length', 'A senha deve ter pelo menos 6 caracteres')),
     confirmarSenha: z.string().min(6, t('validation.confirm_password', 'Confirme sua senha')),
-    telefone: z.string().min(12, t('validation.phone_required', 'Telefone obrigatório')),
+    telefone: z.string().min(10, t('validation.phone_required', 'Telefone obrigatório')),
     remoteJid: z.string(),
   }).refine((data) => data.senha === data.confirmarSenha, {
     message: t('validation.passwords_not_match', 'As senhas não coincidem'),
@@ -133,7 +133,7 @@ export default function Register() {
       email: "",
       senha: "",
       confirmarSenha: "",
-      telefone: "55",
+      telefone: "",
       remoteJid: crypto.randomUUID(), // Generate a unique ID for remoteJid
     },
   });

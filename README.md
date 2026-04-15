@@ -1,4 +1,4 @@
-# FinanceHub by XPIRIA
+# Rendalyze by Rendalyze
 
 Sistema SaaS completo de gestão financeira pessoal e empresarial.
 
@@ -216,13 +216,13 @@ REDIS_URL=redis://localhost:6379
 
 ### Idealização e Desenvolvimento
 **Bruno D. Afonso**
-XPIRIA Co-Founder
-bruno@xpiria.com.br
+Rendalyze Co-Founder
+bruno@rendalyze.com.br
 
 ### Integração N8N - Revisão e Melhorias
 **Pedro**
-XPIRIA Co-Founder
-pedro@xpiria.com.br
+Rendalyze Co-Founder
+pedro@rendalyze.com.br
 
 ---
 
@@ -231,10 +231,10 @@ pedro@xpiria.com.br
 Para mais informações:
 
 - **WhatsApp:** [(41) 98503-7379](https://wa.me/5541985037379)
-- **Formulário:** [https://xpiria.dev](https://xpiria.dev)
+- **Formulário:** [https://rendalyze.com.br](https://rendalyze.com.br)
 
 ---
 
 ## Licença
 
-MIT License - XPIRIA AI SOLUTIONS © 2025
+MIT License - Rendalyze © 2025

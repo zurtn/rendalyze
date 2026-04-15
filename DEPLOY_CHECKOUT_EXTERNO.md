@@ -14,14 +14,14 @@ Adicione no arquivo `.env` de produção:
 
 ```env
 # URLs do Frontend (OBRIGATÓRIO para gerar links de checkout)
-FRONTEND_URL=https://app.financehub.com
-BASE_URL=https://app.financehub.com
+FRONTEND_URL=https://app.rendalyze.com
+BASE_URL=https://app.rendalyze.com
 
 # Webhook de Boas-Vindas (OPCIONAL - se quiser envio automático)
-WEBHOOK_BOAS_VINDAS_URL=https://prod-wf.pulsofinanceiro.net.br/webhook/boasvindas
+WEBHOOK_BOAS_VINDAS_URL=https://prod-wf.rendalyze.com.br/webhook/boasvindas
 
 # Webhook de Ativação (já existente)
-WEBHOOK_ATIVACAO_URL=https://prod-wf.pulsofinanceiro.net.br/webhook/ativacao
+WEBHOOK_ATIVACAO_URL=https://prod-wf.rendalyze.com.br/webhook/ativacao
 
 # Asaas (já existente - apenas verificar)
 ASAAS_API_KEY=sua_chave_aqui
@@ -49,29 +49,29 @@ cd ..
 npm run build
 
 # 4. Ou simplesmente reiniciar o servidor
-pm2 restart financehub
+pm2 restart rendalyze
 # ou
-systemctl restart financehub
+systemctl restart rendalyze
 ```
 
 ---
 
 ### **3. Configurar Mensagem de Boas-Vindas (Admin)**
 
-1. Acesse: `https://app.financehub.com/admin/welcome-messages`
+1. Acesse: `https://app.rendalyze.com/admin/welcome-messages`
 2. Edite ou crie mensagem tipo `welcome`
 3. Use a tag `{link_pagamento}` na mensagem:
 
 ```
 Título:
-Bem-vindo ao FinanceHub, {nome}!
+Bem-vindo ao Rendalyze, {nome}!
 
 Mensagem:
 Olá {nome}!
 
 Sua conta foi criada com sucesso, mas ainda não está ativa.
 
-Para acessar todos os recursos do FinanceHub, você precisa ativar sua assinatura.
+Para acessar todos os recursos do Rendalyze, você precisa ativar sua assinatura.
 
 👉 Clique no link abaixo para efetuar o pagamento:
 
@@ -79,9 +79,9 @@ Para acessar todos os recursos do FinanceHub, você precisa ativar sua assinatur
 
 Após o pagamento, sua conta será ativada automaticamente e você poderá começar a usar nossa plataforma.
 
-Obrigado por escolher o FinanceHub!
+Obrigado por escolher o Rendalyze!
 
-Equipe FinanceHub
+Equipe Rendalyze
 ```
 
 4. **Salvar**
@@ -98,7 +98,7 @@ echo -n "123:user@email.com" | base64
 # Output: MTIzOnVzZXJAZW1haWwuY29t
 
 # Testar validação
-curl -X GET "https://app.financehub.com/api/billing/checkout/validate/MTIzOnVzZXJAZW1haWwuY29t"
+curl -X GET "https://app.rendalyze.com/api/billing/checkout/validate/MTIzOnVzZXJAZW1haWwuY29t"
 ```
 
 **Resposta esperada:**
@@ -117,7 +117,7 @@ curl -X GET "https://app.financehub.com/api/billing/checkout/validate/MTIzOnVzZX
 #### **Teste 2: Buscar Mensagem Processada**
 
 ```bash
-curl -X GET "https://app.financehub.com/api/welcome-messages/welcome/user/123"
+curl -X GET "https://app.rendalyze.com/api/welcome-messages/welcome/user/123"
 ```
 
 **Resposta esperada:**
@@ -125,8 +125,8 @@ curl -X GET "https://app.financehub.com/api/welcome-messages/welcome/user/123"
 {
   "success": true,
   "data": {
-    "title": "Bem-vindo ao FinanceHub, João!",
-    "message": "...https://app.financehub.com/checkout/plans?tokenaccess=..."
+    "title": "Bem-vindo ao Rendalyze, João!",
+    "message": "...https://app.rendalyze.com/checkout/plans?tokenaccess=..."
   }
 }
 ```
@@ -134,7 +134,7 @@ curl -X GET "https://app.financehub.com/api/welcome-messages/welcome/user/123"
 #### **Teste 3: Registrar Novo Usuário**
 
 ```bash
-curl -X POST "https://app.financehub.com/api/auth/register" \
+curl -X POST "https://app.rendalyze.com/api/auth/register" \
   -H "Content-Type: application/json" \
   -d '{
     "nome": "Teste Deploy",
@@ -147,10 +147,10 @@ curl -X POST "https://app.financehub.com/api/auth/register" \
 **Verificar logs:**
 ```bash
 # Se usando PM2
-pm2 logs financehub | grep "UserRegister"
+pm2 logs rendalyze | grep "UserRegister"
 
 # Ou tail direto no log
-tail -f /var/log/financehub/app.log | grep "webhook"
+tail -f /var/log/rendalyze/app.log | grep "webhook"
 ```
 
 **Saída esperada:**
@@ -163,7 +163,7 @@ tail -f /var/log/financehub/app.log | grep "webhook"
 
 1. Abrir no navegador:
 ```
-https://app.financehub.com/checkout/plans?tokenaccess=MTIzOnVzZXJAZW1haWwuY29t
+https://app.rendalyze.com/checkout/plans?tokenaccess=MTIzOnVzZXJAZW1haWwuY29t
 ```
 
 2. Deve mostrar:
@@ -182,7 +182,7 @@ https://app.financehub.com/checkout/plans?tokenaccess=MTIzOnVzZXJAZW1haWwuY29t
 
 1. No Make.com/n8n, criar webhook para:
    ```
-   POST https://prod-wf.pulsofinanceiro.net.br/webhook/boasvindas
+   POST https://prod-wf.rendalyze.com.br/webhook/boasvindas
    ```
 
 2. Configurar para receber evento `usuario_registrado`
@@ -311,7 +311,7 @@ Se algo der errado, basta:
 
 2. **Restart do servidor:**
 ```bash
-pm2 restart financehub
+pm2 restart rendalyze
 ```
 
 3. **Sistema volta ao comportamento anterior**
@@ -374,7 +374,7 @@ Se encontrar problemas:
 
 1. **Verificar logs:**
    ```bash
-   pm2 logs financehub --lines 100
+   pm2 logs rendalyze --lines 100
    ```
 
 2. **Verificar variáveis de ambiente:**
@@ -385,12 +385,12 @@ Se encontrar problemas:
 
 3. **Testar endpoint direto:**
    ```bash
-   curl -v https://app.financehub.com/api/welcome-messages/welcome/user/1
+   curl -v https://app.rendalyze.com/api/welcome-messages/welcome/user/1
    ```
 
 4. **Verificar Swagger:**
    ```
-   https://app.financehub.com/docs
+   https://app.rendalyze.com/docs
    ```
 
 ---

@@ -57,7 +57,7 @@ bash
 ASAAS_ENVIRONMENT=sandbox
 ASAAS_API_KEY=sua_key_aqui
 ASAAS_WEBHOOK_SECRET=$(openssl rand -hex 32)
-EMAIL_FROM=noreply@financehub.com
+EMAIL_FROM=noreply@rendalyze.com
 
 
 ### 2. Criar Plano via Admin

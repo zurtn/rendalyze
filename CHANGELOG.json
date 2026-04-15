@@ -318,7 +318,7 @@
         "Remoção do dropdown de filtro de status na página de transações para interface mais limpa"
       ],
       "improvements": [
-        "Header FinanceHub agora fica visível abaixo do header administrativo em mobile",
+        "Header Rendalyze agora fica visível abaixo do header administrativo em mobile",
         "Espaçamento adequado tanto para super admin direto quanto durante personificação",
         "Interface de transações simplificada com filtro de status padrão 'TODOS'",
         "Dashboard admin aprimorado com informações claras de distribuição de carteiras"

@@ -1,4 +1,4 @@
-# Análise de Performance e Otimizações - FinanceHub SaaS
+# Análise de Performance e Otimizações - Rendalyze SaaS
 
 ## Resumo Executivo
 

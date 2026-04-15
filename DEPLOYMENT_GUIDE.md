@@ -1,4 +1,4 @@
-# Guia de Deployment - FinanceHub
+# Guia de Deployment - Rendalyze
 
 ## Problema Comum: "relation usuarios does not exist"
 

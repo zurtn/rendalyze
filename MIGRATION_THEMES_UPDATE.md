@@ -72,7 +72,7 @@ CREATE TRIGGER update_custom_themes_updated_at_trigger
 const existingDefaultTheme = await client`SELECT id FROM custom_themes WHERE is_default = true`;
 
 if (existingDefaultTheme.length === 0) {
-  // Inserir tema padrão do FinanceHub com configurações light e dark
+  // Inserir tema padrão do Rendalyze com configurações light e dark
   await client`INSERT INTO custom_themes (name, light_config, dark_config, is_default) VALUES (...)`;
 }
 ```

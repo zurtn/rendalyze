@@ -24,7 +24,7 @@ POST [WEBHOOK_BOAS_VINDAS_URL]
 {
   "evento": "usuario_registrado",
   "timestamp": "2025-01-13T10:30:00.000Z",
-  "dominio": "https://financehub.com",
+  "dominio": "https://rendalyze.com",
   "id": 123,
   "nome": "Pedro Silva",
   "email": "pedro@email.com",
@@ -43,14 +43,14 @@ POST [WEBHOOK_BOAS_VINDAS_URL]
 
 ```env
 # URL do webhook para enviar boas-vindas (prioritária)
-WEBHOOK_BOAS_VINDAS_URL=https://prod-wf.pulsofinanceiro.net.br/webhook/boasvindas
+WEBHOOK_BOAS_VINDAS_URL=https://prod-wf.rendalyze.com.br/webhook/boasvindas
 
 # Ou usar a URL de ativação como fallback
-WEBHOOK_ATIVACAO_URL=https://prod-wf.pulsofinanceiro.net.br/webhook/ativacao
+WEBHOOK_ATIVACAO_URL=https://prod-wf.rendalyze.com.br/webhook/ativacao
 
 # URL do frontend (para gerar links)
-FRONTEND_URL=https://app.financehub.com
-BASE_URL=https://app.financehub.com
+FRONTEND_URL=https://app.rendalyze.com
+BASE_URL=https://app.rendalyze.com
 ```
 
 ### **No Make.com/n8n:**
@@ -73,7 +73,7 @@ GET /api/welcome-messages/welcome/user/{{userId}}
 
 ### **Exemplo:**
 ```bash
-curl -X GET "https://api.financehub.com/api/welcome-messages/welcome/user/123"
+curl -X GET "https://api.rendalyze.com/api/welcome-messages/welcome/user/123"
 ```
 
 ### **Response:**
@@ -125,14 +125,14 @@ Olá {nome}!
 
 Sua conta foi criada com sucesso, mas ainda não está ativa.
 
-Para acessar todos os recursos do FinanceHub, você precisa ativar sua assinatura.
+Para acessar todos os recursos do Rendalyze, você precisa ativar sua assinatura.
 
 Clique no botão abaixo para efetuar o pagamento e começar a usar nossa plataforma:
 
 {link_pagamento}
 
 Obrigado!
-FinanceHub Team
+Rendalyze Team
 ```
 
 4. Salvar

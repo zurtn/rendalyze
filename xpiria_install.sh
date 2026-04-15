@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# XPIRIA Installation Script
-# Automated installer for XPIRIA Financial System
+# Rendalyze Installation Script
+# Automated installer for Rendalyze Financial System
 # Version: 1.0.0
-# Author: XPIRIA Team
+# Author: Rendalyze Team
 
 set -e  # Exit on any error
 
@@ -19,15 +19,15 @@ NC='\033[0m' # No Color
 
 # Global variables
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-LOG_FILE="/tmp/xpiria_install.log"
+LOG_FILE="/tmp/rendalyze_install.log"
 NODE_VERSION="18"
 POSTGRES_VERSION="14"
-APP_USER="xpiria"
-APP_DIR="/opt/xpiria"
-SERVICE_NAME="xpiria"
+APP_USER="rendalyze"
+APP_DIR="/opt/rendalyze"
+SERVICE_NAME="rendalyze"
 
 # ASCII Art Function
-show_xpiria_header() {
+show_rendalyze_header() {
     clear
     echo -e "${PURPLE}"
     cat << "EOF"
@@ -90,7 +90,7 @@ check_root() {
 
 # Detect OS
 detect_os() {
-    show_xpiria_header
+    show_rendalyze_header
     log "INFO" "Detectando sistema operacional..."
     
     if [[ -f /etc/os-release ]]; then
@@ -118,7 +118,7 @@ detect_os() {
 
 # Check system requirements
 check_requirements() {
-    show_xpiria_header
+    show_rendalyze_header
     log "INFO" "Verificando requisitos do sistema..."
     
     # Check available disk space (minimum 2GB)
@@ -146,7 +146,7 @@ check_requirements() {
 
 # Update system packages
 update_system() {
-    show_xpiria_header
+    show_rendalyze_header
     log "INFO" "Atualizando repositórios do sistema..."
     
     case $PACKAGE_MANAGER in
@@ -165,7 +165,7 @@ update_system() {
 
 # Install basic dependencies
 install_basic_deps() {
-    show_xpiria_header
+    show_rendalyze_header
     log "INFO" "Instalando dependências básicas..."
     
     case $PACKAGE_MANAGER in
@@ -206,7 +206,7 @@ check_nodejs() {
 
 # Install Node.js
 install_nodejs() {
-    show_xpiria_header
+    show_rendalyze_header
     log "INFO" "Instalando Node.js $NODE_VERSION..."
     
     # Install NodeSource repository
@@ -244,7 +244,7 @@ check_postgresql() {
 
 # Install PostgreSQL
 install_postgresql() {
-    show_xpiria_header
+    show_rendalyze_header
     log "INFO" "Instalando PostgreSQL $POSTGRES_VERSION..."
     
     case $PACKAGE_MANAGER in
@@ -267,7 +267,7 @@ install_postgresql() {
 
 # Configure database
 configure_database() {
-    show_xpiria_header
+    show_rendalyze_header
     log "INFO" "Configurando banco de dados..."
     
     echo -e "${YELLOW}Configuração do Banco de Dados${NC}"
@@ -323,7 +323,7 @@ configure_database() {
 
 # Create application user
 create_app_user() {
-    show_xpiria_header
+    show_rendalyze_header
     log "INFO" "Criando usuário da aplicação..."
     
     if ! id "$APP_USER" &>/dev/null; then
@@ -343,8 +343,8 @@ create_app_user() {
 
 # Setup application
 setup_application() {
-    show_xpiria_header
-    log "INFO" "Configurando aplicação XPIRIA..."
+    show_rendalyze_header
+    log "INFO" "Configurando aplicação Rendalyze..."
     
     # Copy application files
     log "INFO" "Copiando arquivos da aplicação..."
@@ -401,7 +401,7 @@ EOF
 
 # Build application
 build_application() {
-    show_xpiria_header
+    show_rendalyze_header
     log "INFO" "Compilando aplicação..."
     
     sudo -u $APP_USER bash << EOF
@@ -427,13 +427,13 @@ EOF
 
 # Create systemd service
 create_systemd_service() {
-    show_xpiria_header
+    show_rendalyze_header
     log "INFO" "Criando serviço systemd..."
     
     cat > /etc/systemd/system/$SERVICE_NAME.service << EOF
 [Unit]
-Description=XPIRIA Financial System
-Documentation=https://github.com/xpiria/xpiria
+Description=Rendalyze Financial System
+Documentation=https://github.com/rendalyze/rendalyze
 After=network.target postgresql.service
 
 [Service]
@@ -470,7 +470,7 @@ EOF
 
 # Configure firewall
 configure_firewall() {
-    show_xpiria_header
+    show_rendalyze_header
     log "INFO" "Configurando firewall..."
     
     if command -v ufw &> /dev/null; then
@@ -489,8 +489,8 @@ configure_firewall() {
 
 # Start application
 start_application() {
-    show_xpiria_header
-    log "INFO" "Iniciando aplicação XPIRIA..."
+    show_rendalyze_header
+    log "INFO" "Iniciando aplicação Rendalyze..."
     
     systemctl start $SERVICE_NAME || error_exit "Falha ao iniciar aplicação"
     
@@ -509,7 +509,7 @@ start_application() {
 
 # Validate installation
 validate_installation() {
-    show_xpiria_header
+    show_rendalyze_header
     log "INFO" "Validando instalação..."
     
     # Check if service is running
@@ -540,7 +540,7 @@ validate_installation() {
 
 # Show final summary
 show_summary() {
-    show_xpiria_header
+    show_rendalyze_header
     echo -e "${GREEN}🎉 INSTALAÇÃO CONCLUÍDA COM SUCESSO! 🎉${NC}"
     echo ""
     echo -e "${WHITE}Resumo da Instalação:${NC}"
@@ -574,9 +574,9 @@ show_summary() {
 # Main installation flow
 main() {
     # Initialize log file
-    echo "XPIRIA Installation Log - $(date)" > "$LOG_FILE"
+    echo "Rendalyze Installation Log - $(date)" > "$LOG_FILE"
     
-    log "INFO" "Iniciando instalação do XPIRIA Financial System"
+    log "INFO" "Iniciando instalação do Rendalyze Financial System"
     
     # Check if running as root
     check_root
@@ -630,7 +630,7 @@ main() {
     # Show summary
     show_summary
     
-    log "INFO" "Instalação do XPIRIA concluída com sucesso"
+    log "INFO" "Instalação do Rendalyze concluída com sucesso"
 }
 
 # Trap errors and cleanup

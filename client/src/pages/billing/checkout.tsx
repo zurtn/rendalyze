@@ -311,7 +311,7 @@ export default function CheckoutPage({
   return (
     <div className="container max-w-6xl mx-auto py-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold">Assinar FinanceHub</h1>
+        <h1 className="text-3xl font-bold">Assinar Rendalyze</h1>
         <p className="text-muted-foreground">Complete seu cadastro e comece a usar</p>
       </div>
 

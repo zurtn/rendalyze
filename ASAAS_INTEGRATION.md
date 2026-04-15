@@ -2,7 +2,7 @@
 
 ## 📋 Visão Geral
 
-Este documento descreve a integração completa do sistema de pagamentos recorrentes via Asaas para o FinanceHub.
+Este documento descreve a integração completa do sistema de pagamentos recorrentes via Asaas para o Rendalyze.
 
 **Características implementadas:**
 - ✅ Assinatura mensal recorrente
@@ -47,7 +47,7 @@ ASAAS_WEBHOOK_URL=https://seu-dominio.com.br/api/webhooks/asaas
 # EMAIL SERVICE (Opcional - para notificações)
 # ============================================
 
-EMAIL_FROM=noreply@financehub.com.br
+EMAIL_FROM=noreply@rendalyze.com.br
 
 # Opção 1: SMTP
 EMAIL_SERVICE=smtp

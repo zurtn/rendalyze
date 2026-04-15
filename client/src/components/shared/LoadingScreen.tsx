@@ -16,7 +16,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ text }) => {
 
       // Função para obter texto localizado sem depender do Context
       const getLocalizedLoadingText = () => {
-        const cachedLocale = localStorage.getItem('financehub_locale');
+        const cachedLocale = localStorage.getItem('rendalyze_locale');
         if (cachedLocale) {
           switch (cachedLocale) {
             case 'es-es':

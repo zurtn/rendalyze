@@ -355,7 +355,7 @@ function Sidebar() {
                top: '75px', 
                height: 'calc(100vh - 75px)'
              } : { minHeight: '100vh' }}>
-        {/* Header fixo do FinanceHub */}
+        {/* Header fixo do Rendalyze */}
         <div className="p-5 pb-0 flex-shrink-0">
           <div className="flex items-center justify-start mb-8">
             <div className="flex items-center">

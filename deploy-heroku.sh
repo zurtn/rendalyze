@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Script de deploy para Heroku - FinanceHub SaaS
+# Script de deploy para Heroku - Rendalyze SaaS
 # Execute: chmod +x deploy-heroku.sh && ./deploy-heroku.sh
 
 set -e
 
-echo "🚀 FinanceHub SaaS - Deploy para Heroku"
+echo "🚀 Rendalyze SaaS - Deploy para Heroku"
 echo "======================================="
 
 # Verificar se heroku CLI está instalado
@@ -21,7 +21,7 @@ if ! heroku auth:whoami &> /dev/null; then
 fi
 
 # Nome da aplicação (modificar conforme necessário)
-APP_NAME=${1:-financehub-saas-$(date +%s)}
+APP_NAME=${1:-rendalyze-saas-$(date +%s)}
 
 echo "📱 Criando aplicação: $APP_NAME"
 

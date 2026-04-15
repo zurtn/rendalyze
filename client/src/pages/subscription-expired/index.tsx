@@ -18,7 +18,7 @@ export default function SubscriptionExpired() {
             </div>
             <CardTitle className="text-red-400">{t('subscription.expired.title', 'Assinatura Expirada')}</CardTitle>
             <CardDescription className="text-gray-300">
-              {t('subscription.expired.description', 'Sua assinatura do FinanceHub expirou e o acesso foi suspenso')}
+              {t('subscription.expired.description', 'Sua assinatura do Rendalyze expirou e o acesso foi suspenso')}
             </CardDescription>
           </CardHeader>
           

@@ -560,7 +560,7 @@ export async function updateUserStatus(req: Request, res: Response) {
         const webhookData = {
           evento: "usuario_ativado",
           timestamp: new Date().toISOString(),
-          dominio: process.env.BASE_URL || 'https://financehub.xpiria.com.br',
+          dominio: process.env.BASE_URL || 'https://rendalyze.rendalyze.com.br',
           id: updatedUser.id,
           nome: updatedUser.nome,
           email: updatedUser.email,
@@ -583,7 +583,7 @@ export async function updateUserStatus(req: Request, res: Response) {
         console.log(JSON.stringify(webhookData, null, 2));
         console.log("====================");
 
-        const webhookResponse = await fetch(process.env.WEBHOOK_ATIVACAO_URL || 'https://prod-wf.pulsofinanceiro.net.br/webhook/ativacao', {
+        const webhookResponse = await fetch(process.env.WEBHOOK_ATIVACAO_URL || 'https://prod-wf.rendalyze.com.br/webhook/ativacao', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -1145,7 +1145,7 @@ export async function updateUser(req: Request, res: Response) {
         const webhookData = {
           evento: "usuario_ativado",
           timestamp: new Date().toISOString(),
-          dominio: process.env.BASE_URL || 'https://financehub.xpiria.com.br',
+          dominio: process.env.BASE_URL || 'https://rendalyze.rendalyze.com.br',
           id: updatedUser.id,
           nome: updatedUser.nome,
           email: updatedUser.email,
@@ -1168,7 +1168,7 @@ export async function updateUser(req: Request, res: Response) {
         console.log(JSON.stringify(webhookData, null, 2));
         console.log("====================");
 
-        const webhookResponse = await fetch(process.env.WEBHOOK_ATIVACAO_URL || 'https://prod-wf.pulsofinanceiro.net.br/webhook/ativacao', {
+        const webhookResponse = await fetch(process.env.WEBHOOK_ATIVACAO_URL || 'https://prod-wf.rendalyze.com.br/webhook/ativacao', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

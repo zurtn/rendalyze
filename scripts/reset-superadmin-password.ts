@@ -5,12 +5,12 @@
  * ============================================================
  *
  * Este script permite listar e alterar senhas de super admins
- * do sistema FinanceHub de forma segura via console.
+ * do sistema Rendalyze de forma segura via console.
  *
  * @author Bruno D. Afonso
  * @website https://brunoafonso.dev
  * @instagram @brunoafonso.dev
- * @email bruno@xpiria.com.br
+ * @email bruno@rendalyze.com.br
  *
  * Uso: npx tsx scripts/reset-superadmin-password.ts
  *
@@ -61,13 +61,13 @@ function printBanner() {
   print('║                                                            ║', 'cyan');
   print('║       🔐 RESET DE SENHA - SUPER ADMIN                      ║', 'cyan');
   print('║                                                            ║', 'cyan');
-  print('║       FinanceHub - Sistema de Gestão Financeira            ║', 'cyan');
+  print('║       Rendalyze - Sistema de Gestão Financeira            ║', 'cyan');
   print('║                                                            ║', 'cyan');
   print('╠════════════════════════════════════════════════════════════╣', 'cyan');
   print('║  Autor: Bruno D. Afonso                                    ║', 'dim');
   print('║  Site: https://brunoafonso.dev                             ║', 'dim');
   print('║  Instagram: @brunoafonso.dev                               ║', 'dim');
-  print('║  Email: bruno@xpiria.com.br                                ║', 'dim');
+  print('║  Email: bruno@rendalyze.com.br                                ║', 'dim');
   print('╚════════════════════════════════════════════════════════════╝', 'cyan');
   console.log('');
 }

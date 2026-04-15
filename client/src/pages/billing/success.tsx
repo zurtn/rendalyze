@@ -496,7 +496,7 @@ export default function BillingSuccessPage() {
       >
         <p className="text-sm text-muted-foreground">
           Dúvidas ou precisa de ajuda? Entre em contato com nosso{' '}
-          <a href="mailto:suporte@financehub.com" className="text-primary hover:underline font-semibold">
+          <a href="mailto:suporte@rendalyze.com" className="text-primary hover:underline font-semibold">
             suporte
           </a>
           {' '}ou acesse nosso{' '}

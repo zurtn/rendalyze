@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Script de deploy para Railway - FinanceHub SaaS
+# Script de deploy para Railway - Rendalyze SaaS
 # Execute: chmod +x deploy-railway.sh && ./deploy-railway.sh
 
 set -e
 
-echo "🚂 FinanceHub SaaS - Deploy para Railway"
+echo "🚂 Rendalyze SaaS - Deploy para Railway"
 echo "======================================="
 
 # Verificar se railway CLI está instalado
@@ -21,7 +21,7 @@ if ! railway whoami &> /dev/null; then
 fi
 
 # Criar projeto
-PROJECT_NAME=${1:-financehub-saas}
+PROJECT_NAME=${1:-rendalyze-saas}
 echo "📱 Criando projeto: $PROJECT_NAME"
 
 # Inicializar projeto Railway

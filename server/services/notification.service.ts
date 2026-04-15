@@ -126,7 +126,7 @@ export class NotificationService {
       const htmlBody = config.html || this.textToHtml(config.body);
 
       const mailOptions = {
-        from: config.from || process.env.EMAIL_FROM || 'noreply@financehub.com',
+        from: config.from || process.env.EMAIL_FROM || 'noreply@rendalyze.com',
         to: config.to,
         subject: config.subject,
         text: config.body,
@@ -188,7 +188,7 @@ export class NotificationService {
 <body>
   <div class="container">
     <div class="logo">
-      <h2 style="color: #4CAF50; margin: 0;">FinanceHub</h2>
+      <h2 style="color: #4CAF50; margin: 0;">Rendalyze</h2>
     </div>
     <div class="content">
       ${text.split('\n').map(line => `<p>${line}</p>`).join('')}
@@ -244,18 +244,18 @@ Olá ${user.nome}!
 
 Sua assinatura do plano "${plan.name}" foi ativada com sucesso!
 
-Agora você tem acesso completo a todos os recursos do FinanceHub.
+Agora você tem acesso completo a todos os recursos do Rendalyze.
 
 Próximo pagamento: ${this.formatNextMonthDate()}
 
 Qualquer dúvida, estamos à disposição!
 
-FinanceHub Team
+Rendalyze Team
       `.trim();
 
       // Enviar email
       await this.sendEmail({
-        from: process.env.EMAIL_FROM || 'noreply@financehub.com',
+        from: process.env.EMAIL_FROM || 'noreply@rendalyze.com',
         to: user.email,
         subject,
         body: message
@@ -288,11 +288,11 @@ Para reativar seu acesso, por favor atualize sua forma de pagamento.
 
 Acesse: ${process.env.BASE_URL}/billing/settings
 
-FinanceHub Team
+Rendalyze Team
       `.trim();
 
       await this.sendEmail({
-        from: process.env.EMAIL_FROM || 'noreply@financehub.com',
+        from: process.env.EMAIL_FROM || 'noreply@rendalyze.com',
         to: user.email,
         subject,
         body: message
@@ -326,11 +326,11 @@ Você ainda pode reativar sua assinatura a qualquer momento.
 
 Sentiremos sua falta!
 
-FinanceHub Team
+Rendalyze Team
       `.trim();
 
       await this.sendEmail({
-        from: process.env.EMAIL_FROM || 'noreply@financehub.com',
+        from: process.env.EMAIL_FROM || 'noreply@rendalyze.com',
         to: user.email,
         subject,
         body: message
@@ -366,11 +366,11 @@ ${invoiceUrl ? `Fatura: ${invoiceUrl}` : ''}
 
 Obrigado por continuar conosco!
 
-FinanceHub Team
+Rendalyze Team
       `.trim();
 
       await this.sendEmail({
-        from: process.env.EMAIL_FROM || 'noreply@financehub.com',
+        from: process.env.EMAIL_FROM || 'noreply@rendalyze.com',
         to: user.email,
         subject,
         body: message
@@ -406,11 +406,11 @@ Acesse: ${process.env.BASE_URL}/billing/settings
 
 ${retryCount === 2 ? 'ATENÇÃO: Na próxima falha, seu acesso será bloqueado.' : ''}
 
-FinanceHub Team
+Rendalyze Team
       `.trim();
 
       await this.sendEmail({
-        from: process.env.EMAIL_FROM || 'noreply@financehub.com',
+        from: process.env.EMAIL_FROM || 'noreply@rendalyze.com',
         to: user.email,
         subject,
         body: message
@@ -438,16 +438,16 @@ Olá ${user.nome},
 
 Após 3 tentativas, não conseguimos processar seu pagamento.
 
-Seu acesso ao FinanceHub foi temporariamente bloqueado.
+Seu acesso ao Rendalyze foi temporariamente bloqueado.
 
 Para reativar, atualize sua forma de pagamento:
 ${process.env.BASE_URL}/billing/settings
 
-FinanceHub Team
+Rendalyze Team
       `.trim();
 
       await this.sendEmail({
-        from: process.env.EMAIL_FROM || 'noreply@financehub.com',
+        from: process.env.EMAIL_FROM || 'noreply@rendalyze.com',
         to: user.email,
         subject,
         body: message
@@ -482,11 +482,11 @@ O pagamento será processado automaticamente no cartão cadastrado.
 Caso deseje atualizar a forma de pagamento:
 ${process.env.BASE_URL}/billing/settings
 
-FinanceHub Team
+Rendalyze Team
       `.trim();
 
       await this.sendEmail({
-        from: process.env.EMAIL_FROM || 'noreply@financehub.com',
+        from: process.env.EMAIL_FROM || 'noreply@rendalyze.com',
         to: user.email,
         subject,
         body: message

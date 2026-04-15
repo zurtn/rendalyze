@@ -4,10 +4,21 @@
       "Bash(git clone:*)",
       "Bash(cp:*)",
       "Bash(rm -rf /c/RENDALYZE/.git)",
-      "Bash(rm -rf /tmp/financehub-temp)",
+      "Bash(rm -rf /tmp/rendalyze-temp)",
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git branch:*)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)",
+      "Bash(gh repo:*)",
+      "Bash(grep -rli \"Rendalyze\\\\|rendalyze\\\\|RENDALYZE\\\\|Rendalyze\" --include=*.ts --include=*.tsx --include=*.js --include=*.json --include=*.md --include=*.yml --include=*.sh --include=*.sql --include=*.env --include=Dockerfile)",
+      "Bash(grep -rli \"Rendalyze\\\\|rendalyze\\\\|Rendalyze\" --include=*.ts --include=*.tsx --include=*.js --include=*.json --include=*.md --include=*.yml --include=*.sh --include=*.sql --include=*.env --include=Dockerfile)",
+      "Bash(grep -rli \"pulsofinanceiro\\\\|testaulapratica\\\\|conversaolivre\" --include=*.ts --include=*.tsx --include=*.js --include=*.json --include=*.md --include=*.yml --include=*.sh --include=*.sql --include=*.env --include=Dockerfile)",
+      "Bash(jobs -l)",
+      "Bash(while ps:*)",
+      "Bash(do sleep:*)",
+      "Bash(done)"
     ]
   }
 }

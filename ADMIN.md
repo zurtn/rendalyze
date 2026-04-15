@@ -1,8 +1,8 @@
-# Manual do Administrador - FinanceHub SaaS
+# Manual do Administrador - Rendalyze SaaS
 
 ## Visão Geral
 
-O FinanceHub é uma plataforma SaaS de gestão financeira pessoal com sistema administrativo avançado que permite gerenciamento completo de usuários, monitoramento de sistema e suporte através de personificação de usuários.
+O Rendalyze é uma plataforma SaaS de gestão financeira pessoal com sistema administrativo avançado que permite gerenciamento completo de usuários, monitoramento de sistema e suporte através de personificação de usuários.
 
 ## Recursos Administrativos
 
@@ -178,12 +178,12 @@ Todos os endpoints administrativos requerem:
 4. **Falha na personificação**: Verificar se usuário está ativo
 
 ### Contatos de Suporte
-- **Suporte Técnico**: suporte@financehub.com
-- **Emergências**: admin@financehub.com
+- **Suporte Técnico**: suporte@rendalyze.com
+- **Emergências**: admin@rendalyze.com
 - **Documentação**: /docs (Swagger UI)
 
 ---
 
 **Versão**: 1.0  
 **Última Atualização**: 27/05/2025  
-**Responsável**: Equipe de Desenvolvimento FinanceHub
+**Responsável**: Equipe de Desenvolvimento Rendalyze

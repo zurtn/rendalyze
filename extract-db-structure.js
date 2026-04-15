@@ -3,7 +3,7 @@ import fs from 'fs';
 
 const { Client } = pg;
 
-const DATABASE_URL = 'postgres://postgres:90d6b1d7c819709ca1c8@painel-main.pulsofinanceiro.net.br:5432/pulsofinanceiro?sslmode=disable';
+const DATABASE_URL = 'postgres://postgres:90d6b1d7c819709ca1c8@painel-main.rendalyze.com.br:5432/rendalyze?sslmode=disable';
 
 async function extractDatabaseStructure() {
   const client = new Client({

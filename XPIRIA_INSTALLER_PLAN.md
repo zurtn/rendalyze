@@ -1,7 +1,7 @@
-# PLANO DE AÇÃO: INSTALADOR XPIRIA
+# PLANO DE AÇÃO: INSTALADOR Rendalyze
 
 ## 📋 OBJETIVO
-Criar um script de instalação automatizada (`xpiria_install.sh`) para configurar e instalar todas as dependências necessárias do sistema financeiro XPIRIA em servidores Linux.
+Criar um script de instalação automatizada (`rendalyze_install.sh`) para configurar e instalar todas as dependências necessárias do sistema financeiro Rendalyze em servidores Linux.
 
 ## 🔍 ANÁLISE DO PROJETO
 
@@ -79,7 +79,7 @@ Criar um script de instalação automatizada (`xpiria_install.sh`) para configur
 ## 🛠️ ESTRUTURA DO SCRIPT
 
 ### Seções do Script:
-1. **Header ASCII XPIRIA** - Todas as seções
+1. **Header ASCII Rendalyze** - Todas as seções
 2. **Funções Utilitárias** - Logging, verificações, instalações
 3. **Verificação de Ambiente** - OS, usuário, espaço
 4. **Verificação de Dependências** - Node, PostgreSQL, Git
@@ -152,7 +152,7 @@ npm run db:seed                # Seed dados globais
 ## 🎯 PRÓXIMOS PASSOS
 
 1. **Implementar script base** com estrutura de funções
-2. **Adicionar ASCII header XPIRIA** em todas as seções
+2. **Adicionar ASCII header Rendalyze** em todas as seções
 3. **Implementar verificações de ambiente**
 4. **Implementar instalação de dependências**
 5. **Implementar configuração de banco**

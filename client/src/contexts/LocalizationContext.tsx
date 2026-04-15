@@ -26,10 +26,10 @@ interface LocalizationProviderProps {
 
 // Cache keys para localStorage
 const CACHE_KEYS = {
-  LOCALE: 'financehub_locale',
-  TRANSLATIONS: 'financehub_translations',
-  AVAILABLE_LOCALES: 'financehub_available_locales',
-  CACHE_TIMESTAMP: 'financehub_cache_timestamp',
+  LOCALE: 'rendalyze_locale',
+  TRANSLATIONS: 'rendalyze_translations',
+  AVAILABLE_LOCALES: 'rendalyze_available_locales',
+  CACHE_TIMESTAMP: 'rendalyze_cache_timestamp',
 };
 
 // Cache desabilitado para sempre buscar traduções atualizadas do banco

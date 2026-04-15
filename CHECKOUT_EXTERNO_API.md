@@ -222,7 +222,7 @@ const userId = 123;
 
 // Buscar mensagem com link de pagamento já processado
 const response = await fetch(
-  `https://api.financehub.com/api/welcome-messages/welcome/user/${userId}`
+  `https://api.rendalyze.com/api/welcome-messages/welcome/user/${userId}`
 );
 
 const { data } = await response.json();
@@ -367,8 +367,8 @@ curl -X GET "http://localhost:5000/api/admin/welcome-messages/welcome?userId=123
 
 ```env
 # URL do frontend (para gerar links)
-FRONTEND_URL=https://app.financehub.com
-BASE_URL=https://app.financehub.com
+FRONTEND_URL=https://app.rendalyze.com
+BASE_URL=https://app.rendalyze.com
 
 # Asaas (já existente)
 ASAAS_API_KEY=...

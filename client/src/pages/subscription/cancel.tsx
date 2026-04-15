@@ -108,7 +108,7 @@ export default function CancelSubscription() {
                   {t("subscription.cancel.current_plan.plan_label", "Plano")}:
                 </span>
                 <span className="text-white font-medium">
-                  {t("subscription.cancel.current_plan.plan_value", "FinanceHub Premium")}
+                  {t("subscription.cancel.current_plan.plan_value", "Rendalyze Premium")}
                 </span>
               </div>
               

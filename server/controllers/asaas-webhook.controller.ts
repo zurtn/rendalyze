@@ -275,7 +275,7 @@ async function processWebhookEvent(eventType: string, paymentData: any, webhookI
         const webhookData = {
           evento: "usuario_ativado",
           timestamp: new Date().toISOString(),
-          dominio: process.env.BASE_URL || 'https://financehub.xpiria.com.br',
+          dominio: process.env.BASE_URL || 'https://rendalyze.rendalyze.com.br',
           id: user.id,
           nome: user.nome,
           email: user.email,
@@ -298,7 +298,7 @@ async function processWebhookEvent(eventType: string, paymentData: any, webhookI
         console.log('[AsaasWebhook] Webhook payload:', JSON.stringify(webhookData, null, 2));
 
         const webhookResponse = await fetch(
-          process.env.WEBHOOK_ATIVACAO_URL || 'https://prod-wf.pulsofinanceiro.net.br/webhook/ativacao',
+          process.env.WEBHOOK_ATIVACAO_URL || 'https://prod-wf.rendalyze.com.br/webhook/ativacao',
           {
             method: 'POST',
             headers: {

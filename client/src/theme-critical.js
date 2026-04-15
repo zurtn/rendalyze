@@ -135,7 +135,7 @@
   // Função para obter texto localizado baseado no idioma padrão
   function getLocalizedText() {
     // Tentar buscar do localStorage primeiro (cache)
-    const cachedLocale = localStorage.getItem('financehub_locale');
+    const cachedLocale = localStorage.getItem('rendalyze_locale');
     if (cachedLocale) {
       switch (cachedLocale) {
         case 'es-es':
@@ -205,7 +205,7 @@
         loadingDiv.innerHTML = `
           <div class="critical-loading-content">
             <div class="critical-spinner"></div>
-            <h2 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">FinanceHub</h2>
+            <h2 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">Rendalyze</h2>
             <p style="margin: 0; font-size: 14px; opacity: 0.7;">${loadingText}</p>
           </div>
         `;
@@ -224,7 +224,7 @@
   loadingDiv.innerHTML = `
     <div class="critical-loading-content">
       <div class="critical-spinner"></div>
-      <h2 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">FinanceHub</h2>
+      <h2 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">Rendalyze</h2>
       <p style="margin: 0; font-size: 14px; opacity: 0.7;">${loadingText}</p>
     </div>
   `;

@@ -1,8 +1,8 @@
-# Políticas de Segurança - FinanceHub SaaS
+# Políticas de Segurança - Rendalyze SaaS
 
 ## Visão Geral de Segurança
 
-O FinanceHub implementa múltiplas camadas de segurança para proteger dados financeiros sensíveis dos usuários e garantir a integridade do sistema administrativo.
+O Rendalyze implementa múltiplas camadas de segurança para proteger dados financeiros sensíveis dos usuários e garantir a integridade do sistema administrativo.
 
 ## Arquitetura de Segurança
 
@@ -231,9 +231,9 @@ SECURE_COOKIES=true
 ## Contatos de Segurança
 
 ### Equipe de Segurança
-- **CISO**: security@financehub.com
+- **CISO**: security@rendalyze.com
 - **Emergências 24/7**: +55 11 9999-9999
-- **Vulnerabilidades**: security-reports@financehub.com
+- **Vulnerabilidades**: security-reports@rendalyze.com
 
 ### Parceiros de Segurança
 - **Consultoria Externa**: SecureConsulting Inc.

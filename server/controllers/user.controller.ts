@@ -112,7 +112,7 @@ export async function register(req: Request, res: Response) {
           const webhookData = {
             evento: "usuario_registrado",
             timestamp: new Date().toISOString(),
-            dominio: process.env.BASE_URL || 'https://financehub.xpiria.com.br',
+            dominio: process.env.BASE_URL || 'https://rendalyze.rendalyze.com.br',
             id: newUser.id,
             nome: newUser.nome,
             email: newUser.email,
@@ -128,7 +128,7 @@ export async function register(req: Request, res: Response) {
 
           console.log('[UserRegister] Enviando webhook de boas-vindas...');
           const webhookResponse = await fetch(
-            process.env.WEBHOOK_BOAS_VINDAS_URL || process.env.WEBHOOK_ATIVACAO_URL || 'https://prod-wf.pulsofinanceiro.net.br/webhook/boasvindas',
+            process.env.WEBHOOK_BOAS_VINDAS_URL || process.env.WEBHOOK_ATIVACAO_URL || 'https://prod-wf.rendalyze.com.br/webhook/boasvindas',
             {
               method: 'POST',
               headers: {

@@ -93,7 +93,7 @@ export default function Login() {
       
       toast({
         title: "Login realizado com sucesso",
-        description: "Bem-vindo ao FinanceHub!",
+        description: "Bem-vindo ao Rendalyze!",
       });
       
       // Redireciona e força recarregamento da página para atualizar o estado de autenticação

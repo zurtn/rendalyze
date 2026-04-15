@@ -1,4 +1,4 @@
--- Inicialização do banco PostgreSQL para FinanceHub SaaS
+-- Inicialização do banco PostgreSQL para Rendalyze SaaS
 -- Este arquivo é executado automaticamente na criação do container
 
 -- Configurar timezone
@@ -12,7 +12,7 @@ CREATE EXTENSION IF NOT EXISTS "pg_stat_statements";
 SET client_encoding = 'UTF8';
 
 -- Comentário informativo
-COMMENT ON DATABASE financehub IS 'FinanceHub SaaS - Sistema de Gestão Financeira Personal';
+COMMENT ON DATABASE rendalyze IS 'Rendalyze SaaS - Sistema de Gestão Financeira Personal';
 
 -- Configurações de performance
 ALTER SYSTEM SET shared_preload_libraries = 'pg_stat_statements';

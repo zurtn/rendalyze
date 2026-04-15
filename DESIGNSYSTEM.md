@@ -491,4 +491,4 @@ function validateContrast(
 
 ---
 
-*Este documento serve como guia completo para implementação de um sistema de temas profissional, robusto e user-friendly para a aplicação FinanceHub.*
+*Este documento serve como guia completo para implementação de um sistema de temas profissional, robusto e user-friendly para a aplicação Rendalyze.*

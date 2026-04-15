@@ -67,7 +67,7 @@ export function ExpiredSubscriptionOverlay({ expirationDate }: ExpiredSubscripti
           
           <div className="text-center space-y-4">
             <p className="text-sm text-muted-foreground leading-relaxed">
-              {t("subscription.overlay.renew_prompt", "Para continuar usando todos os recursos do FinanceHub Premium, renove sua assinatura ou entre em contato com o suporte.")}
+              {t("subscription.overlay.renew_prompt", "Para continuar usando todos os recursos do Rendalyze Premium, renove sua assinatura ou entre em contato com o suporte.")}
             </p>
             
             <div className="space-y-3">

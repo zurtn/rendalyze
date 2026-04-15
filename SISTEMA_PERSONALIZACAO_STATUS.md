@@ -1,4 +1,4 @@
-# 🎯 Status: Sistema de Personalização do Nome - FinanceHub
+# 🎯 Status: Sistema de Personalização do Nome - Rendalyze
 
 **Data**: 2025-01-13
 **Status**: ⚙️ EM PROGRESSO (70% concluído)
@@ -14,12 +14,12 @@
 - **Conteúdo**:
   - Tabela `system_settings` criada
   - 6 configurações padrão inseridas:
-    - `system_name`: "FinanceHub"
-    - `system_name_short`: "financehub"
+    - `system_name`: "Rendalyze"
+    - `system_name_short`: "rendalyze"
     - `system_tagline`: "Gestão financeira inteligente e moderna"
-    - `support_email`: "suporte@financehub.com"
-    - `system_url`: "https://financehub.com"
-    - `system_description`: "FinanceHub - Gerencie suas finanças..."
+    - `support_email`: "suporte@rendalyze.com"
+    - `system_url`: "https://rendalyze.com"
+    - `system_description`: "Rendalyze - Gerencie suas finanças..."
   - Trigger para `updated_at` automático
 
 #### ✅ Controller
@@ -143,7 +143,7 @@ export function updateAllMetadata(config: SystemConfig): void;
 14. ❌ `client/src/utils/theme-manager.ts` (1 local)
 
 #### Prioridade BAIXA - Técnico:
-15. ✅ **MANTER**: Chaves de localStorage com prefixo "financehub_"
+15. ✅ **MANTER**: Chaves de localStorage com prefixo "rendalyze_"
     - Não alterar para evitar perda de dados dos usuários
 
 ---
@@ -152,8 +152,8 @@ export function updateAllMetadata(config: SystemConfig): void;
 
 **❌ ANTES (hardcoded)**:
 ```tsx
-<h1>FinanceHub</h1>
-<p>Bem-vindo ao FinanceHub Premium</p>
+<h1>Rendalyze</h1>
+<p>Bem-vindo ao Rendalyze Premium</p>
 ```
 
 **✅ DEPOIS (dinâmico)**:
@@ -260,7 +260,7 @@ Adicionar script inline no `<head>`:
 
 ### Antes:
 ```
-❌ Nome fixo "FinanceHub" em 32 lugares
+❌ Nome fixo "Rendalyze" em 32 lugares
 ❌ Rebuild necessário para trocar nome
 ❌ Sem personalização para white-label
 ```
@@ -299,7 +299,7 @@ Adicionar script inline no `<head>`:
 - ✅ system_description
 
 ### O que NÃO DEVE ser alterado:
-- ❌ Chaves de localStorage (`financehub_locale`, `financehub_translations`, etc)
+- ❌ Chaves de localStorage (`rendalyze_locale`, `rendalyze_translations`, etc)
   - **Motivo**: Usuários perderiam preferências salvas
   - **Solução**: Manter prefixo original ou criar migração de dados
 

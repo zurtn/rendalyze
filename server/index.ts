@@ -78,7 +78,7 @@ app.use(express.urlencoded({ extended: false }));
 // Configuração da sessão
 const MemoryStoreSession = MemoryStore(session);
 app.use(session({
-  secret: "financehub-secret-key",
+  secret: "rendalyze-secret-key",
   resave: false,
   saveUninitialized: false,
   store: new MemoryStoreSession({

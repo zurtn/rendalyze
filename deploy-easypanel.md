@@ -1,4 +1,4 @@
-# Deploy no EasyPanel - FinanceHub SaaS
+# Deploy no EasyPanel - Rendalyze SaaS
 
 ## Configuração via Interface Web
 
@@ -10,10 +10,10 @@
 ### 2. Configuração do Container
 ```yaml
 # Nome da aplicação
-Name: financehub-saas
+Name: rendalyze-saas
 
 # Imagem Docker
-Image: financehub:latest
+Image: rendalyze:latest
 
 # Build Context (se usando Git)
 Build Context: .
@@ -85,13 +85,13 @@ Use serviços como:
 ### Via Docker Registry
 1. **Build Local**
    ```bash
-   docker build -t financehub:latest .
-   docker tag financehub:latest registry.easypanel.com/seu-usuario/financehub
-   docker push registry.easypanel.com/seu-usuario/financehub
+   docker build -t rendalyze:latest .
+   docker tag rendalyze:latest registry.easypanel.com/seu-usuario/rendalyze
+   docker push registry.easypanel.com/seu-usuario/rendalyze
    ```
 
 2. **Deploy no EasyPanel**
-   - Use a imagem: `registry.easypanel.com/seu-usuario/financehub:latest`
+   - Use a imagem: `registry.easypanel.com/seu-usuario/rendalyze:latest`
 
 ## Configurações Avançadas
 
@@ -172,14 +172,14 @@ Configure alertas para:
 
 ```bash
 # Conectar via SSH (se disponível)
-easypanel ssh financehub-saas
+easypanel ssh rendalyze-saas
 
 # Ver logs
-easypanel logs financehub-saas --follow
+easypanel logs rendalyze-saas --follow
 
 # Restart aplicação
-easypanel restart financehub-saas
+easypanel restart rendalyze-saas
 
 # Scale aplicação
-easypanel scale financehub-saas --replicas=2
+easypanel scale rendalyze-saas --replicas=2
 ```

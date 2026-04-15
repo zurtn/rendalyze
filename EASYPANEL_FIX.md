@@ -34,11 +34,11 @@ git push origin main
 ### Ou Build Local
 ```bash
 # Testar build
-docker build -t financehub:test .
+docker build -t rendalyze:test .
 
 # Deploy
-docker build -t registry.easypanel.com/seu-usuario/financehub .
-docker push registry.easypanel.com/seu-usuario/financehub
+docker build -t registry.easypanel.com/seu-usuario/rendalyze .
+docker push registry.easypanel.com/seu-usuario/rendalyze
 ```
 
 ## O que foi Corrigido
@@ -58,10 +58,10 @@ node build-production.js
 NODE_ENV=production node dist/index.js
 
 # Build Docker completo
-docker build --no-cache -t financehub:test .
+docker build --no-cache -t rendalyze:test .
 
 # Testar container
-docker run -p 5000:5000 -e DATABASE_URL="postgresql://test:test@localhost:5432/test" financehub:test
+docker run -p 5000:5000 -e DATABASE_URL="postgresql://test:test@localhost:5432/test" rendalyze:test
 ```
 
 ## Troubleshooting Adicional
@@ -169,11 +169,11 @@ CMD ["node", "dist/index.js"]
 
 ```bash
 # Testar build local
-docker build -t financehub-test .
+docker build -t rendalyze-test .
 
 # Verificar estrutura da imagem
-docker run --rm -it financehub-test sh
+docker run --rm -it rendalyze-test sh
 
 # Testar aplicação local
-docker run -p 5000:5000 -e DATABASE_URL="sua-url" financehub-test
+docker run -p 5000:5000 -e DATABASE_URL="sua-url" rendalyze-test
 ```

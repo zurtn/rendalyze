@@ -1,4 +1,4 @@
--- Script para resetar o usuário bruno@xpiria.com.br
+-- Script para resetar o usuário bruno@rendalyze.com.br
 -- Mantém apenas o usuário, senha e um token de API
 
 -- Primeiro, obter o ID do usuário bruno
@@ -10,10 +10,10 @@ BEGIN
     -- Buscar o ID do usuário bruno
     SELECT id INTO bruno_user_id 
     FROM usuarios 
-    WHERE email = 'bruno@xpiria.com.br';
+    WHERE email = 'bruno@rendalyze.com.br';
     
     IF bruno_user_id IS NULL THEN
-        RAISE NOTICE 'Usuário bruno@xpiria.com.br não encontrado';
+        RAISE NOTICE 'Usuário bruno@rendalyze.com.br não encontrado';
         RETURN;
     END IF;
     
@@ -74,7 +74,7 @@ BEGIN
     WHERE id = bruno_user_id;
     RAISE NOTICE 'Dados do usuário atualizados';
     
-    RAISE NOTICE 'Reset do usuário bruno@xpiria.com.br concluído com sucesso!';
+    RAISE NOTICE 'Reset do usuário bruno@rendalyze.com.br concluído com sucesso!';
     
 END $$;
 
@@ -92,4 +92,4 @@ SELECT
     (SELECT COUNT(*) FROM api_tokens at WHERE at.usuario_id = u.id) as total_tokens
 FROM usuarios u
 LEFT JOIN carteiras w ON w.usuario_id = u.id
-WHERE u.email = 'bruno@xpiria.com.br';
+WHERE u.email = 'bruno@rendalyze.com.br';

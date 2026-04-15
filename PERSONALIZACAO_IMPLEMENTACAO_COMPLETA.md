@@ -142,14 +142,14 @@ O sistema **JÁ FUNCIONA** sem as substituições manuais porque:
 2. ✅ Context está disponível globalmente
 3. ✅ Interface admin funciona perfeitamente
 
-**MAS** para substituir o texto hardcoded "FinanceHub" nos componentes, você precisa:
+**MAS** para substituir o texto hardcoded "Rendalyze" nos componentes, você precisa:
 
-### Arquivos com "FinanceHub" hardcoded (19 arquivos)
+### Arquivos com "Rendalyze" hardcoded (19 arquivos)
 
 #### **Como substituir** (pattern):
 ```tsx
 // ❌ ANTES
-<h1>FinanceHub</h1>
+<h1>Rendalyze</h1>
 
 // ✅ DEPOIS - Opção 1 (completo)
 import { useSystemConfig } from '@/contexts/SystemConfigContext';
@@ -172,19 +172,19 @@ const systemName = useSystemConfigValue('system_name');
    - Linha 289: Copyright
 
 2. `client/src/pages/billing/checkout.tsx` - 1 ocorrência
-   - Linha 314: Título "Assinar FinanceHub"
+   - Linha 314: Título "Assinar Rendalyze"
 
 3. `client/src/pages/billing/success.tsx` - 1 ocorrência
-   - Linha 499: Email "suporte@financehub.com" → usar `config.support_email`
+   - Linha 499: Email "suporte@rendalyze.com" → usar `config.support_email`
 
 4. `client/src/pages/subscription-expired/index.tsx` - 1 ocorrência
    - Linha 21: Mensagem de assinatura expirada
 
 5. `client/src/pages/subscription/cancel.tsx` - 1 ocorrência
-   - Linha 111: Nome do plano "FinanceHub Premium"
+   - Linha 111: Nome do plano "Rendalyze Premium"
 
 6. `client/src/pages/admin/dashboard.tsx` - 1 ocorrência
-   - Linha 249: Título "Dashboard SaaS - FinanceHub"
+   - Linha 249: Título "Dashboard SaaS - Rendalyze"
 
 7. `client/src/components/subscription/ExpiredSubscriptionOverlay.tsx` - 1 ocorrência
    - Linha 70: Mensagem de renovação
@@ -196,7 +196,7 @@ const systemName = useSystemConfigValue('system_name');
    - Linha 85: Loading screen
 
 10. `client/src/pages/login/index.tsx` - 1 ocorrência
-    - Linha 96: Toast "Bem-vindo ao FinanceHub!"
+    - Linha 96: Toast "Bem-vindo ao Rendalyze!"
 
 11. `client/src/pages/not-found.tsx` - 1 ocorrência
     - Linha 188: Alt text da logo
@@ -206,7 +206,7 @@ const systemName = useSystemConfigValue('system_name');
     - Placeholders nos campos de mensagens (linhas 2132, 2144, 2160, 2216, 2233, 2248, 2305, 2321, 2492)
 
 13. `client/src/utils/theme-manager.ts` - 1 ocorrência
-    - Linha 44: Nome do tema padrão "Padrão FinanceHub"
+    - Linha 44: Nome do tema padrão "Padrão Rendalyze"
 
 **Prioridade BAIXA** (2 arquivos):
 14. `client/index.html` - 4 ocorrências
@@ -224,12 +224,12 @@ const systemName = useSystemConfigValue('system_name');
 Criei um helper para facilitar as substituições:
 
 ```bash
-# Procurar todas as ocorrências de "FinanceHub" nos arquivos TSX
+# Procurar todas as ocorrências de "Rendalyze" nos arquivos TSX
 cd client/src
-grep -rn "FinanceHub" --include="*.tsx" --include="*.ts" .
+grep -rn "Rendalyze" --include="*.tsx" --include="*.ts" .
 
 # Ver contexto de cada ocorrência
-grep -rn -C 3 "FinanceHub" --include="*.tsx" .
+grep -rn -C 3 "Rendalyze" --include="*.tsx" .
 ```
 
 ---
@@ -303,7 +303,7 @@ JSON.parse(sessionStorage.getItem('system_config'))
 3. `client/src/pages/admin/customize.tsx` - Interface admin
 
 ### Arquivos Pendentes: 15
-- Componentes React com "FinanceHub" hardcoded (substituição opcional)
+- Componentes React com "Rendalyze" hardcoded (substituição opcional)
 
 ### Linhas de Código: ~950
 - Backend: ~300 linhas
@@ -324,7 +324,7 @@ JSON.parse(sessionStorage.getItem('system_config'))
 
 ### Antes:
 ```
-❌ "FinanceHub" hardcoded em 32 lugares
+❌ "Rendalyze" hardcoded em 32 lugares
 ❌ Rebuild necessário para trocar nome
 ❌ Sem personalização white-label
 ❌ SEO fixo
@@ -380,11 +380,11 @@ ADD COLUMN changed_at TIMESTAMP;
 ## ⚠️ AVISOS IMPORTANTES
 
 ### 1. Chaves de localStorage
-**NÃO ALTERAR** as chaves que começam com "financehub_":
-- `financehub_locale`
-- `financehub_translations`
-- `financehub_available_locales`
-- `financehub_cache_timestamp`
+**NÃO ALTERAR** as chaves que começam com "rendalyze_":
+- `rendalyze_locale`
+- `rendalyze_translations`
+- `rendalyze_available_locales`
+- `rendalyze_cache_timestamp`
 
 **Motivo**: Usuários perderiam preferências salvas (idioma, tema, etc)
 
@@ -435,7 +435,7 @@ O sistema de personalização está **85% implementado e funcional**!
 - API pública e admin
 
 ⚠️ **O que falta** (opcional):
-- Substituir "FinanceHub" hardcoded em 15 componentes
+- Substituir "Rendalyze" hardcoded em 15 componentes
 - Isso pode ser feito gradualmente conforme necessário
 
 **Recomendação**: Teste o sistema primeiro, veja se atende suas necessidades, e depois faça as substituições manuais nos componentes conforme prioridade.
