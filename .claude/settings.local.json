@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone:*)",
+      "Bash(cp:*)",
+      "Bash(rm -rf /c/RENDALYZE/.git)",
+      "Bash(rm -rf /tmp/financehub-temp)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
